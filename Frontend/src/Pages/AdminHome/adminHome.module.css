@@ -1,0 +1,54 @@
+.adminHomeContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .subHeaderContainer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .bookBoxContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  
+  .paginationContainer {
+    margin-top: 20px;
+    width: 100%; /* Ensure pagination spans full width */
+    display: flex;
+    justify-content: center; /* Center pagination */
+}
+  
+  .searchResultsContainer {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    color: #505050;
+    text-align: center;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .adminHomeContainer {
+      padding: 10px;
+    }
+  
+    .subHeaderContainer {
+      margin-bottom: 15px;
+    }
+  
+    .bookBoxContainer,
+    .paginationContainer,
+    .searchResultsContainer {
+      width: 100%;
+    }
+  }
+  

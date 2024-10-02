@@ -1,0 +1,99 @@
+/* General styles */
+.nav {
+    background-color: #509091; /* Matches the design color */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navLeft {
+    display: flex;
+    align-items: center;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+}
+
+/* Home button styling */
+.homeButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+/* Dropdown button styling */
+.dropdownButton {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdownButton:hover {
+    background-color: #408080; /* Slight hover effect */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;  
+  }
+/* Dropdown styling */
+.dropdown-menu {
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #ddd;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .homeButton {
+        font-size: 16px;
+    }
+
+    .dropdownButton {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 5px;
+    }
+
+    .homeButton {
+        font-size: 14px;
+    }
+
+    .dropdownButton {
+        font-size: 14px;
+    }
+}

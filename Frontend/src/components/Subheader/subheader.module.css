@@ -1,0 +1,63 @@
+.subheaderContainer {
+    background: rgba(80, 144, 145, .6);
+    width: 95%;
+    height: 70px;
+}
+
+.searchInput {
+    width: 100%;
+    max-width: 300px; /* Limits the max width of the input */
+}
+
+.dropdown {
+    flex-shrink: 0; /* Prevents dropdown from shrinking */
+}
+
+.bookBox {
+    width: 94%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: left;
+    margin: 4px auto;
+    background-color: rgba(216, 242, 243, 0.8);
+    cursor: pointer;
+}
+
+.bookBox:hover {
+    background-color: #eee;
+}
+
+.searchResults {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .bookBox {
+        font-size: 20px;
+        height: 45px;
+    }
+
+    .searchInput {
+        width: 70%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .bookBox {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .searchInput {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .searchResults {
+        width: 100%;
+    }
+}

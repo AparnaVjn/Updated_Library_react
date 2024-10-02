@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+  }
+  
+  .addForm {
+    margin: 40px auto;
+    width: 70%;
+    max-width: 900px;
+    background-color: rgba(216, 242, 243, 0.8);
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 40px;
+    color: #509091;
+  }
+  
+  .mb3 {
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .mb4 {
+    margin: 20px 60px;
+  }
+  
+  .submitbtn {
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+    height: 40px;
+    max-width: 200px;
+    min-width: 100px;
+    background-color: #509091;
+    border-radius: 5px;
+    border: none;
+  }
+  

@@ -1,0 +1,77 @@
+/* BookHeader.module.css */
+.bookHeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(80, 144, 145, 0.6);
+    width: 95%;
+    height: 60px;
+    margin: 20px auto;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+  
+  .formBookContainer {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    height: 40px;
+  }
+  
+  .addButton {
+    width: 120px;
+    height: 40px;
+    margin-left: 15px;
+    background-color: #509091;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addButton:hover {
+    background-color: #417b7b;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 15px;
+      height: auto;
+    }
+  
+    .formContainer {
+      flex-direction: column;
+    }
+  
+    .addButton {
+      width: 100%;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .inputField {
+      width: 100%;
+      font-size: 14px;
+      padding: 6px;
+      height: 35px;
+    }
+  
+    .addButton {
+      font-size: 13px;
+      height: 35px;
+    }
+  }
+  

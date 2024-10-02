@@ -1,0 +1,59 @@
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: #509091;
+  }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .formControlInput {
+    display: inline-block;
+  }
+  
+  .col1 {
+    flex: 1; /* Make both columns take equal width */
+  padding: 0 10px;
+  }
+  
+  .button {
+    margin-left: 30px;
+    background-color: #509091;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Stack rows on smaller screens */
+      padding-left: 10px; /* Reduce padding */
+      align-items: flex-start;
+    }
+  
+    .formControlInput {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .button {
+      margin-left: 0; /* Remove left margin on small screens */
+      margin-top: 10px; /* Add top margin for spacing */
+    }
+    .col1 {
+        width: 100%; /* Make columns full-width on smaller screens */
+        padding: 5px 0;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .row {
+      margin-top: 10px; /* Reduce margin for smaller screens */
+    }
+  
+    .formControlInput {
+      height: 70%; /* Adjust height for smaller screens */
+    }
+  }
+  

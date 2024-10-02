@@ -1,0 +1,85 @@
+/* BookDetails.module.css */
+.body {
+    margin: 0;
+  }
+  
+  .bookDetails {
+    width: 90%;
+    max-width: 800px; /* Limits max width for larger screens */
+    margin: 40px auto;
+    background-color: rgba(216, 242, 243, 0.8);
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust font size for responsiveness */
+    color: #509091;
+  }
+  
+  .tablePpty {
+    margin: auto;
+  }
+  
+  .issueStatus,
+  .issueText {
+    display: inline-block; 
+    margin-right: 20px;
+  }
+  
+  span {
+    margin-right: 22px;
+  }
+  
+  .statusBtn {
+    border-radius: 4px;
+  }
+
+  .editBtn {
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+    height: 40px;
+    max-width: 200px;
+    min-width: 100px;
+    background-color: #509091;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .deleteBtn {
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+    height: 40px;
+    max-width: 200px;
+    min-width: 100px;
+    background-color: #509091;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .bookDetails {
+      width: 95%;
+      padding: 20px; /* Reduce padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .bookDetails {
+      padding: 15px; /* Further reduce padding */
+    }
+  }
+  
