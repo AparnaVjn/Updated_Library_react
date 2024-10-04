@@ -15,7 +15,7 @@ function HomePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(apiurl, { email, password })
+    axios.post(`${apiurl}/login`, { email, password })
       .then(result => {
         console.log(result);
         if (result.data.success === true) {

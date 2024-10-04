@@ -10,8 +10,9 @@
 }
 
 .dropdown {
-    flex-shrink: 0; /* Prevents dropdown from shrinking */
+    flex-shrink: 0;
 }
+
 
 .bookBox {
     width: 94%;

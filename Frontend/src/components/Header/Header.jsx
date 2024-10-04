@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './header.module.css'; 
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -6,6 +6,8 @@ import { apiurl } from '../../config';
 
 function Header() {
   const [adminName, setAdminName] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null); // Reference for the dropdown
 
   useEffect(() => {
     const storedAdminName = localStorage.getItem('adminName');
@@ -14,20 +16,19 @@ function Header() {
     } else {
       fetchAdminName();
     }
+
+    // Add click event listener to handle clicks outside the dropdown
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside); // Cleanup on unmount
+    };
   }, []);
 
   const fetchAdminName = async () => {
     try {
-      const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
-      if (!token) {
-        throw new Error('Token not found');
-      }
-
-      const response = await axios.get(apiurl + '/adminName', {
-        headers: { Authorization: `Bearer ${token}` }
-      });
-
+      const response = await axios.get(`${apiurl}/adminName`, { withCredentials: true });
       const { adminName } = response.data;
+
       localStorage.setItem('adminName', adminName);
       setAdminName(adminName);
     } catch (error) {
@@ -38,11 +39,21 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      await axios.post(apiurl + '/logout');
+      await axios.post(`${apiurl}/logout`, {}, { withCredentials: true });
       localStorage.removeItem('adminName');
       window.location.href = '/';
     } catch (error) {
       console.error('Failed to logout:', error);
+    }
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen); // Toggles the dropdown open/close
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false); // Close dropdown if clicked outside
     }
   };
 
@@ -55,19 +66,25 @@ function Header() {
           </Link>
         </div>
         <div className={styles.navRight}>
-          <div className={`dropdown ${styles.dropdown}`}>
+          <div className={styles.dropdown} ref={dropdownRef}>
             <button
-              className={`btn btn-secondary dropdown-toggle ${styles.dropdownButton}`}
+              className={`btn btn-secondary ${styles.dropdownButton}`}
               type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              onClick={toggleDropdown}
+              aria-expanded={isDropdownOpen}
             >
               {adminName ? adminName : 'Admin'}
             </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><button className="dropdown-item" onClick={handleLogout}>Logout</button></li>
-            </ul>
+
+            {isDropdownOpen && (
+              <ul className={`dropdown-menu show ${styles.dropdownMenu}`}>
+                <li>
+                  <button className="dropdown-item" onClick={handleLogout}>
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            )}
           </div>
         </div>
       </div>
