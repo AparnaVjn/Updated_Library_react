@@ -20,9 +20,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: "https://updated-library-react.vercel.app",
-    methods: ["GET", "POST"],
-    credentials: true
+  origin: "https://updated-library-react.vercel.app", 
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
+  credentials: true, 
+  allowedHeaders: ["Content-Type", "Authorization"], 
 }));
 
 
