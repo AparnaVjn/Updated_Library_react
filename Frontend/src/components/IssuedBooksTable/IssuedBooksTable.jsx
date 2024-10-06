@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { apiurl } from '../../config';
-import styles from './IssuedBooksTable.module.css'; // Import module CSS
+import styles from './issuedBooksTable.module.css'; // Import module CSS
 
 function IssuedBooksTable({ student }) {
   const issuedBooks = student.issuedBooks || [];
