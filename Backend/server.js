@@ -18,7 +18,7 @@ import addStudentRoute from './routes/addStudent-route.js';
 
 dotenv.config();
 const app = express();
-
+app.use(cors());
 app.use(cors({
     origin: "https://updated-library-react-516g.vercel.app",
     methods: ["GET", "POST"],
