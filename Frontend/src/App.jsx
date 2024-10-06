@@ -5,7 +5,7 @@ import AdminHome from './Pages/AdminHome/AdminHome';
 import AddBook from './Pages/AddBook/AddBook';
 import BookDetails from './Pages/BookDetails/BookDetails';
 import BookIssue from './Pages/BookIssue/BookIssue';
-import AddStudent from './Pages/AddStudents/addStudent';
+import AddStudent from './Pages/AddStudents/AddStudent';
 import EditBook from './Pages/EditBook/EditBook';
 import BookIssueClone from './Pages/BookIssueClone/BookIssueClone';
 
