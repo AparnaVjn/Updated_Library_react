@@ -3,7 +3,7 @@ import { apiurl } from '../../config.js';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import styles from './homePage.module.css';
-import Image from '../../assets/SchoolImage.jpg';
+import Image from '../../assets/schoolImage.jpg';
 
 function HomePage() {
   const [email, setEmail] = useState('');
