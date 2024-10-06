@@ -1,34 +1,55 @@
 .bookBox {
-    width: 94%;
-    height: 50px;
-    border-radius: 5px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: lighter;
-    text-align: left;
-    margin: 4px auto;
-    background-color: rgba(216, 242, 243, 0.8);
-    cursor: pointer;
+  width: 94%;
+  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: start;
+  align-items: start;
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: left;
+  margin: 4px auto;
+  background-color: rgba(216, 242, 243, 0.8);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Handle long text by truncating with ellipsis */
+/* .bookBox h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+.bookBox:hover {
+  background-color: #eee;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .bookBox {
+    font-size: 20px;
+    padding: 8px;
   }
-  
-  .bookBox:hover {
-    background-color: #eee;
+
+  .bookBox h4 {
+    font-size: 18px;
   }
-  
-  /* Media queries for responsiveness */
-  @media (max-width: 768px) {
-    .bookBox {
-      font-size: 20px;
-      height: 45px;
-    }
+}
+
+@media (max-width: 480px) {
+  .bookBox {
+    font-size: 16px;
+    padding: 6px;
   }
-  
-  @media (max-width: 480px) {
-    .bookBox {
-      font-size: 16px;
-      height: 40px;
-    }
+
+  .bookBox h4 {
+    font-size: 14px;
+    white-space: normal; /* Allow text to wrap on very small screens */
+    word-wrap: break-word;
   }
-  
+}

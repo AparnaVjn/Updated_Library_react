@@ -9,6 +9,11 @@ import adminLoginRoute from './routes/adminlogin-route.js';
 import headerRoute from './routes/header-routes.js';
 import adminHomeRoute from './routes/adminHome-route.js';
 import subHeaderRoute from './routes/subHeader-route.js';
+import addBookRoute from './routes/addBook-route.js';
+import bookDetailsRoute from './routes/bookDetails-route.js';
+import bookEditRoute from './routes/editBook-route.js';
+import bookIssueRoute from './routes/bookIssue-route.js';
+import addStudentRoute from './routes/addStudent-route.js';
 
 
 dotenv.config();
@@ -30,6 +35,11 @@ app.use('/api',adminLoginRoute);
 app.use('/api',headerRoute);
 app.use('/api',adminHomeRoute);
 app.use('/api',subHeaderRoute);
+app.use('/api',addBookRoute);
+app.use('/api',bookDetailsRoute);
+app.use('/api',bookEditRoute);
+app.use('/api',bookIssueRoute);
+app.use('/api',addStudentRoute);
 
 
 

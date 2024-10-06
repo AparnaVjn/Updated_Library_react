@@ -6,6 +6,8 @@ import AddBook from './Pages/AddBook/AddBook';
 import BookDetails from './Pages/BookDetails/BookDetails';
 import BookIssue from './Pages/BookIssue/BookIssue';
 import AddStudent from './Pages/AddStudents/addStudent';
+import EditBook from './Pages/EditBook/EditBook';
+import BookIssueClone from './Pages/BookIssueClone/BookIssueClone';
 
 function App() {
   return (
@@ -16,7 +18,10 @@ function App() {
             <Route path='/addbook'  element={<AddBook/>}  />
             <Route path='/bookdetails'  element={<BookDetails/>}  />
             <Route path='/bookissue'  element={<BookIssue/>}  />
+            <Route path="/bookIssueclone/:admissionNo" element={<BookIssueClone/>} />
             <Route path='/addstudent'  element={<AddStudent/>}  />
+            <Route path="/bookdetails/:id" element={<BookDetails/>}> </Route>
+            <Route path="/editBook/:id" element={<EditBook/>}> </Route>  
         </Routes>
     </Router>
   )

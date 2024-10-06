@@ -1,0 +1,67 @@
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: #509091;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .formControlInput {
+    display: inline-block;
+  }
+  
+  .col1 {
+    flex: 1; 
+  padding: 0 10px;
+  }
+  
+  button {
+    margin-left: 30px;
+    background-color: #509091;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .row {
+      padding-left: 10px;
+    }
+    
+    .col {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    
+    button {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 24px;
+      text-align: center;
+    }
+  
+    .row {
+      padding-left: 5px;
+    }
+  
+    .col {
+      font-size: 14px;
+    }
+  
+    button {
+      width: 100%;
+      margin: 10px auto;
+    }
+    .formControlInput {
+        height: 70%; /* Adjust height for smaller screens */
+      }
+  }
+  

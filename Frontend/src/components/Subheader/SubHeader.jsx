@@ -58,7 +58,9 @@ function SubHeader({ onBookSelect, setSearchResult }) {
           {isDropdownOpen && (
             <ul className="dropdown-menu show"> {/* Manually adding 'show' class */}
               <li><a className="dropdown-item" href="/addBook">Add Book</a></li>
+              <li><a className="dropdown-item" href="/addstudent">Add Student</a></li>
               <li><a className="dropdown-item" href="/bookIssue">Issue/Receive Book</a></li>
+              
             </ul>
           )}
         </div>
