@@ -1,23 +1,20 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.js", "use": "@vercel/node" }
+    { "src": "*.jsx", "use": "@vercel/node" }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "headers": {
-        "Access-Control-Allow-Origin": "https://updated-library-react.vercel.app", // Allow your frontend
-        "Access-Control-Allow-Credentials": "true", // Allow credentials (cookies, auth headers)
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS", // Allowed methods
-        "Access-Control-Allow-Headers": "Content-Type, Authorization" // Allowed headers
+        "Access-Control-Allow-Origin": "https://updated-library-react.vercel.app",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
       },
       "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/"
     }
   ]
 }
+
 
