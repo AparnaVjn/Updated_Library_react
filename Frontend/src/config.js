@@ -1,2 +1,2 @@
-export const baseurl = "http://localhost:3000"
+export const baseurl = "https://updated-library-react-api.vercel.app/"
 export const apiurl = baseurl+"/api"
