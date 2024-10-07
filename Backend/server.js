@@ -18,6 +18,7 @@ import addStudentRoute from './routes/addStudent-route.js';
 
 dotenv.config();
 const app = express();
+const port = process.env.PORT || 3000 ;
 
 app.use(cors({
   origin: "https://updated-library-react.vercel.app", 
@@ -49,4 +50,4 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB...', err));
 
-app.listen(3000, () => console.log('Server started on port 3000'));
+app.listen(port, () => console.log('Server started on port 3000'));
