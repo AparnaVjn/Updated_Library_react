@@ -35,7 +35,7 @@ router.post('/login', async function(req, res) {
           );
           res.cookie('jwt', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
+            secure: true,
             maxAge: 3600000
           });
         // const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: "1d" });
