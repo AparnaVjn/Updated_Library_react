@@ -41,7 +41,7 @@ router.post('/login', async function(req, res) {
         // const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: "1d" });
         user.loggedIn = true; // Set loggedIn flag\
         console.log('after user:',user);
-        console.log('token',token)
+        console.log('token :',token)
         await user.save();
         
         // res.cookie("token", token, { httpOnly: true, secure: process.env.NODE_ENV === 'production' });
