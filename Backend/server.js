@@ -21,11 +21,12 @@ const app = express();
 const port = process.env.PORT || 3000 ;
 
 app.use(cors({
-  origin: "https://library-chowwannur.onrender.com", 
+  origin: ["https://library-chowwannur.onrender.com",  "https://www.stmarysghschowwannur.in"]
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
   credentials: true, 
   allowedHeaders: ["Content-Type", "Authorization"], 
 }));
+ the way of writing origin is correct?
 
 app.options('*', cors());
 
