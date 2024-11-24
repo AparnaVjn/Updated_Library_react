@@ -21,7 +21,7 @@ const app = express();
 const port = process.env.PORT || 3000 ;
 
 app.use(cors({
-  origin: ["https://library-chowwannur.onrender.com",  "https://www.stmarysghschowwannur.in"],
+  origin: "https://library-chowwannur.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
   credentials: true, 
   allowedHeaders: ["Content-Type", "Authorization"], 
