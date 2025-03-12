@@ -26,7 +26,7 @@ app.use(cors({
   credentials: true, 
   allowedHeaders: ["Content-Type", "Authorization"], 
 }));
- the way of writing origin is correct?
+ 
 
 app.options('*', cors());
 
